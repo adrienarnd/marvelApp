@@ -2,7 +2,7 @@
 import apisauce from 'apisauce'
 
 // our "constructor"
-const create = (baseURL = 'developer.marvel.com') => {
+const create = (baseURL = 'https://developer.marvel.com') => {
   // ------
   // STEP 1
   // ------
@@ -14,7 +14,9 @@ const create = (baseURL = 'developer.marvel.com') => {
     baseURL,
     // here are some default headers
     headers: {
-      'Cache-Control': 'no-cache',
+      'Cache-Control': 'no-cache'
+    },
+    params: {
       'apikey': '6bbf5fe0f578dea1c6aa08b57b25f2ae'
     },
     // 10 second timeout...
@@ -35,7 +37,7 @@ const create = (baseURL = 'developer.marvel.com') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getRoot = () => api.get('')
+  const getCharacters = () => api.get('/v1/public/characters')
 
   // ------
   // STEP 3
@@ -51,7 +53,7 @@ const create = (baseURL = 'developer.marvel.com') => {
   //
   return {
     // a list of the API functions from step 2
-    getRoot
+    getCharacters
   }
 }
 
