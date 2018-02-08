@@ -10,8 +10,8 @@ export default StyleSheet.create({
     backgroundColor: Colors.eggplant
   },
   image: {
-    width: Metrics.icons.xl,
-    height: Metrics.icons.xl,
+    width: Metrics.icons.xxl,
+    height: Metrics.icons.xxl,
     margin: Metrics.baseMargin
   },
   label: {

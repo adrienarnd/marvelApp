@@ -21,16 +21,16 @@ class CharactersListScreen extends Component {
     this.props.getCharacters()
   }
 
-  _keyExtractor = (character, index) => character.id
+  _keyExtractor = (item, index) => item.id
 
-  renderItem = (character) => {
+  renderItem = ({item}) => {
     return (
       <View style={styles.buttonsContainer}>
         <ButtonBox 
           onPress={this.openComponents} 
           style={styles.componentButton} 
-          image={character.avatar} 
-          text={character.name} 
+          image={item.avatar} 
+          text={item.name} 
         />
       </View>
     )
