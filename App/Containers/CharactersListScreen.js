@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { View, ScrollView, FlatList, TouchableOpacity, Image, Text, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
-// Add Actions - replace 'Your' with whatever your reducer is called :)
+
+// Redux Actions
 import MarvelActions from '../Redux/MarvelRedux'
 
 // Components
@@ -18,19 +19,26 @@ class CharactersListScreen extends Component {
   }
 
   componentWillmount () {
+    // On charge les données de personnages
     this.props.getCharacters()
   }
 
+  // Permet l'extraction de l'id de l'item courant
   _keyExtractor = (item, index) => item.id
 
-  renderItem = ({item}) => {
+  // Permet de se diriger vers le détail d'un personnage
+  _goToCharacterDetails = (characterIndex) => {
+    this.props.navigation.navigate('CharacterDetailsScreen', { characterIndex })
+  }
+
+  renderItem = (item, index) => {
     return (
       <View style={styles.buttonsContainer}>
-        <ButtonBox 
-          onPress={this.openComponents} 
-          style={styles.componentButton} 
-          image={item.avatar} 
-          text={item.name} 
+        <ButtonBox
+          onPress={this._goToCharacterDetails.bind(this, index)}
+          style={styles.componentButton}
+          image={item.avatar}
+          text={item.name}
         />
       </View>
     )
@@ -51,7 +59,7 @@ class CharactersListScreen extends Component {
 
           <FlatList
             data={characters}
-            renderItem={this.renderItem}
+            renderItem={({item, index}) => this.renderItem(item, index)}
             keyExtractor={this._keyExtractor}
             numColumns={2}
           />
