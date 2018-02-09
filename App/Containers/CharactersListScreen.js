@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, FlatList, TouchableOpacity, Image, Text } from 'react-native'
+import { View, ScrollView, FlatList, TouchableOpacity, Image, Text, ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 import MarvelActions from '../Redux/MarvelRedux'
@@ -39,8 +39,11 @@ class CharactersListScreen extends Component {
   render () {
     return (
       <View style={styles.mainContainer}>
+        {this.props.fetching && 
+          <ActivityIndicator style={styles.loader} size='large' color='white' />
+        }
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-
+        
         <ScrollView showsVerticalScrollIndicator={false} bounces={false} style={styles.container}>
           <View style={styles.centered}>
             <Image source={Images.marvel} style={styles.logo} />
@@ -92,7 +95,8 @@ const characters = [
 
 const mapStateToProps = (state) => {
   return {
-    characters: state.marvel.characters
+    characters: state.marvel.characters,
+    fetching: state.marvel.fetching
   }
 }
 
