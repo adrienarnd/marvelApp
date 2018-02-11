@@ -6,21 +6,11 @@ export default StyleSheet.create({
   container: {
     paddingTop: Metrics.section
   },
-  loader: {
-    position: 'absolute', 
-    top: 0, 
-    right: 0, 
-    bottom: 0, 
-    left: 0, 
-    zIndex: 1
-  },
   logo: {
     height: Metrics.images.logo,
     width: Metrics.images.logo,
     resizeMode: 'contain',
-    borderRadius: 150,
-    borderWidth: 5,
-    borderColor: 'black'
+    borderRadius: 150
   },
   centered: {
     alignItems: 'center'
