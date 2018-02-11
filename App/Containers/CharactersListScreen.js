@@ -77,27 +77,32 @@ const characters = [
   {
     id: 1,
     name: 'Iron-Man',
-    avatar: Images.marvel
+    avatar: Images.ironMan
   },
   {
     id: 2,
     name: 'Spider-Man',
-    avatar: Images.marvel
+    avatar: Images.spiderMan
   },
   {
     id: 3,
-    name: 'Ant-Man',
-    avatar: Images.marvel
+    name: 'Captain-America',
+    avatar: Images.captainAmerica
   },
   {
     id: 4,
     name: 'Hulk',
-    avatar: Images.marvel
+    avatar: Images.hulk
   },
   {
     id: 5,
     name: 'Thor',
-    avatar: Images.marvel
+    avatar: Images.thor
+  },
+  {
+    id: 6,
+    name: 'Wolverine',
+    avatar: Images.wolverine
   }
 ]
 

@@ -17,7 +17,10 @@ export default StyleSheet.create({
   logo: {
     height: Metrics.images.logo,
     width: Metrics.images.logo,
-    resizeMode: 'contain'
+    resizeMode: 'contain',
+    borderRadius: 150,
+    borderWidth: 5,
+    borderColor: 'black'
   },
   centered: {
     alignItems: 'center'

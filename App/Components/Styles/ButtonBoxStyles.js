@@ -12,7 +12,10 @@ export default StyleSheet.create({
   image: {
     width: Metrics.icons.xxl,
     height: Metrics.icons.xxl,
-    margin: Metrics.baseMargin
+    margin: Metrics.baseMargin,
+    borderRadius: 50,
+    borderWidth: 5,
+    borderColor: 'black'
   },
   label: {
     ...Fonts.style.h2,

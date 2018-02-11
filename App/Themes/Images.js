@@ -1,6 +1,12 @@
 // leave off @2x/@3x
 const images = {
   marvel: require('../Images/marvel_logo.png'),
+  ironMan: require('../Images/iron_man.jpg'),
+  spiderMan: require('../Images/spider_man.jpg'),
+  captainAmerica: require('../Images/captain_america.jpg'),
+  hulk: require('../Images/hulk.jpg'),
+  thor: require('../Images/thor.jpg'),
+  wolverine: require('../Images/wolverine.jpg'),
   logo: require('../Images/ir.png'),
   clearLogo: require('../Images/top_logo.png'),
   launch: require('../Images/launch-icon.png'),

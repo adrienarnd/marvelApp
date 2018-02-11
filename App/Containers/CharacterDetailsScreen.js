@@ -23,12 +23,14 @@ class CharacterDetailsScreen extends Component {
           dotColor='white'
           activeDotColor='black'
           >
-            {characters.map((character, index) => 
-              <View style={styles.centered} key={index}>
-                <Image source={character.avatar} style={styles.logo} />
-                <Text style={styles.label}>{character.name}</Text>
-              </View>
-            )}
+            {
+              characters.map((character, index) => 
+                <View style={styles.centered} key={index}>
+                  <Image source={character.avatar} style={styles.logo} />
+                  <Text style={styles.label}>{character.name}</Text>
+                </View>
+              )
+            }
           </Swiper>
         </ScrollView>
       </View>
@@ -40,27 +42,32 @@ const characters = [
   {
     id: 1,
     name: 'Iron-Man',
-    avatar: Images.marvel
+    avatar: Images.ironMan
   },
   {
     id: 2,
     name: 'Spider-Man',
-    avatar: Images.marvel
+    avatar: Images.spiderMan
   },
   {
     id: 3,
-    name: 'Ant-Man',
-    avatar: Images.marvel
+    name: 'Captain-America',
+    avatar: Images.captainAmerica
   },
   {
     id: 4,
     name: 'Hulk',
-    avatar: Images.marvel
+    avatar: Images.hulk
   },
   {
     id: 5,
     name: 'Thor',
-    avatar: Images.marvel
+    avatar: Images.thor
+  },
+  {
+    id: 6,
+    name: 'Wolverine',
+    avatar: Images.wolverine
   }
 ]
 
