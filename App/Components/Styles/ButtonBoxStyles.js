@@ -13,9 +13,7 @@ export default StyleSheet.create({
     width: Metrics.icons.xxl,
     height: Metrics.icons.xxl,
     margin: Metrics.baseMargin,
-    borderRadius: 50,
-    borderWidth: 5,
-    borderColor: 'black'
+    borderRadius: 50
   },
   label: {
     ...Fonts.style.h2,
