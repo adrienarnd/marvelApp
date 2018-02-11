@@ -1,7 +1,6 @@
 import { StackNavigator } from 'react-navigation'
 import CharacterDetailsScreen from '../Containers/CharacterDetailsScreen'
 import CharactersListScreen from '../Containers/CharactersListScreen'
-import LaunchScreen from '../Containers/LaunchScreen'
 
 import styles from './Styles/NavigationStyles'
 
@@ -20,8 +19,7 @@ const PrimaryNav = StackNavigator({
     navigationOptions: {
       header: null
     }
-   },
-  LaunchScreen: { screen: LaunchScreen }
+   }
 }, {
   // Default config for all screens
   headerMode: 'screen',

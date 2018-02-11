@@ -24,7 +24,7 @@ export const INITIAL_STATE = Immutable({
 
 // request characters
 export const request = (state) =>
-  state.merge({ fetching: true })
+  state.merge({ fetching: true, characters: null })
 
 // successful characters lookup
 export const getCharactersSuccess = (state, action) => {
