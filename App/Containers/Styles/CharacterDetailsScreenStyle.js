@@ -26,6 +26,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   label: {
+    paddingTop: 20,
     ...Fonts.style.h2,
     fontSize: 14,
     color: Colors.text
