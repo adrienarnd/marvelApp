@@ -24,11 +24,14 @@ class CharacterDetailsScreen extends Component {
           dotColor='white'
           activeDotColor='black'
         >
-          {data.characters.map((character, index) => 
-            <View style={styles.centered} key={index}>
-              <Image source={character.avatar} style={styles.logo} />
-              <Text style={styles.label}>{character.name}</Text>
-            </View>
+          {data.characters.map((character, index) =>
+            <ScrollView style={{ marginBottom: 100 }} key={index}>
+              <View style={styles.centered}>
+                <Image style={styles.logo} source={character.avatar} />
+                <Text style={styles.name}>{character.name}</Text>
+                <Text style={styles.description}>{character.description}</Text>
+              </View>
+            </ScrollView>
           )}
         </Swiper>
       </View>

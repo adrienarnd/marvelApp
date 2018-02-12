@@ -15,10 +15,17 @@ export default StyleSheet.create({
   centered: {
     alignItems: 'center'
   },
-  label: {
+  name: {
     paddingTop: 20,
     ...Fonts.style.h2,
-    fontSize: 14,
+    fontSize: 16,
     color: Colors.text
+  },
+  description: {
+    padding: 20,
+    ...Fonts.style.h2,
+    fontSize: 14,
+    color: Colors.text,
+    textAlign: 'justify'
   }
 })
