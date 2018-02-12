@@ -8,6 +8,7 @@ import Swiper from 'react-native-swiper'
 // Styles
 import styles from './Styles/CharacterDetailsScreenStyle'
 import { Images } from '../Themes'
+import data from '../../characters'
 
 class CharacterDetailsScreen extends Component {
   render () {
@@ -23,7 +24,7 @@ class CharacterDetailsScreen extends Component {
           dotColor='white'
           activeDotColor='black'
         >
-          {characters.map((character, index) => 
+          {data.characters.map((character, index) => 
             <View style={styles.centered} key={index}>
               <Image source={character.avatar} style={styles.logo} />
               <Text style={styles.label}>{character.name}</Text>
@@ -34,39 +35,6 @@ class CharacterDetailsScreen extends Component {
     )
   }
 }
-
-const characters = [
-  {
-    id: 1,
-    name: 'Iron-Man',
-    avatar: Images.ironMan
-  },
-  {
-    id: 2,
-    name: 'Spider-Man',
-    avatar: Images.spiderMan
-  },
-  {
-    id: 3,
-    name: 'Captain-America',
-    avatar: Images.captainAmerica
-  },
-  {
-    id: 4,
-    name: 'Hulk',
-    avatar: Images.hulk
-  },
-  {
-    id: 5,
-    name: 'Thor',
-    avatar: Images.thor
-  },
-  {
-    id: 6,
-    name: 'Wolverine',
-    avatar: Images.wolverine
-  }
-]
 
 const mapStateToProps = (state) => {
   return {

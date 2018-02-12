@@ -11,6 +11,7 @@ import ButtonBox from '../Components/ButtonBox'
 // Styles
 import styles from './Styles/CharactersListScreenStyle'
 import { Images } from '../Themes'
+import data from '../../characters'
 
 class CharactersListScreen extends Component {
   constructor (props) {
@@ -58,7 +59,7 @@ class CharactersListScreen extends Component {
           </View>
 
           <FlatList
-            data={characters}
+            data={data.characters}
             renderItem={({item, index}) => this.renderItem(item, index)}
             keyExtractor={this._keyExtractor}
             numColumns={2}
@@ -72,39 +73,6 @@ class CharactersListScreen extends Component {
     )
   }
 }
-
-const characters = [
-  {
-    id: 1,
-    name: 'Iron-Man',
-    avatar: Images.ironMan
-  },
-  {
-    id: 2,
-    name: 'Spider-Man',
-    avatar: Images.spiderMan
-  },
-  {
-    id: 3,
-    name: 'Captain-America',
-    avatar: Images.captainAmerica
-  },
-  {
-    id: 4,
-    name: 'Hulk',
-    avatar: Images.hulk
-  },
-  {
-    id: 5,
-    name: 'Thor',
-    avatar: Images.thor
-  },
-  {
-    id: 6,
-    name: 'Wolverine',
-    avatar: Images.wolverine
-  }
-]
 
 const mapStateToProps = (state) => {
   return {
