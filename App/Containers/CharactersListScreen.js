@@ -11,6 +11,8 @@ import ButtonBox from '../Components/ButtonBox'
 // Styles
 import styles from './Styles/CharactersListScreenStyle'
 import { Images } from '../Themes'
+
+// Datas (temporaire car API Marvel non fonctionnelle)
 import data from '../../characters'
 
 class CharactersListScreen extends Component {

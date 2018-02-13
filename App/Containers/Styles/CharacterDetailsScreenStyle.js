@@ -15,10 +15,18 @@ export default StyleSheet.create({
   centered: {
     alignItems: 'center'
   },
+  paginationStyle: {
+    alignItems: 'center',
+    paddingBottom: 20
+  },
+  paginationText: {
+    color: 'white',
+    fontSize: 20
+  },
   name: {
     paddingTop: 20,
     ...Fonts.style.h2,
-    fontSize: 16,
+    fontSize: 20,
     color: Colors.text
   },
   description: {

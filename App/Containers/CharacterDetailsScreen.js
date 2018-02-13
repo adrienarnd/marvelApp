@@ -8,9 +8,21 @@ import Swiper from 'react-native-swiper'
 // Styles
 import styles from './Styles/CharacterDetailsScreenStyle'
 import { Images } from '../Themes'
+
+// Datas (temporaire car API Marvel non fonctionnelle)
 import data from '../../characters'
 
 class CharacterDetailsScreen extends Component {
+  renderPagination = (index, total, context) => {
+    return (
+      <View style={styles.paginationStyle}>
+        <Text style={{ color: 'grey' }}>
+          <Text style={styles.paginationText}>{index + 1}</Text>/{total}
+        </Text>
+      </View>
+    )
+  }
+
   render () {
     const { characterIndex } = this.props.navigation.state.params
 
@@ -21,8 +33,7 @@ class CharacterDetailsScreen extends Component {
         <Swiper 
           style={{ marginTop: 30 }}
           index={characterIndex}
-          dotColor='white'
-          activeDotColor='black'
+          renderPagination={this.renderPagination}
         >
           {data.characters.map((character, index) =>
             <ScrollView style={{ marginBottom: 100 }} key={index}>
