@@ -40,7 +40,11 @@ class CharacterDetailsScreen extends Component {
               <View style={styles.centered}>
                 <Image style={styles.logo} source={character.avatar} />
                 <Text style={styles.name}>{character.name}</Text>
-                <Text style={styles.description}>{character.description}</Text>
+                <Text style={styles.text}>{character.description}</Text>
+                <Text style={styles.text}>{character.name} est présent dans {character.comics.available} comics dont :</Text>
+                {character.comics.items.map((item, index) => 
+                  <Text style={styles.text} key={index}>{item.name}</Text>
+                )}
               </View>
             </ScrollView>
           )}

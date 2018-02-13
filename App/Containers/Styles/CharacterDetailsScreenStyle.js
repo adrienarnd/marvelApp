@@ -29,7 +29,7 @@ export default StyleSheet.create({
     fontSize: 20,
     color: Colors.text
   },
-  description: {
+  text: {
     padding: 20,
     ...Fonts.style.h2,
     fontSize: 14,
