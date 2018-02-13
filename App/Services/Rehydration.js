@@ -26,7 +26,7 @@ const updateReducers = (store: Object) => {
       persistStore(store, null, startup).purge()
       AsyncStorage.setItem('reducerVersion', reducerVersion)
     } else {
-      persistStore(store, null, startup)
+      // persistStore(store, null, startup)
     }
   }).catch(() => {
     persistStore(store, null, startup)
