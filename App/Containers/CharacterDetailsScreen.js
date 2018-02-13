@@ -36,7 +36,7 @@ class CharacterDetailsScreen extends Component {
           renderPagination={this.renderPagination}
         >
           {data.characters.map((character, index) =>
-            <ScrollView style={{ marginBottom: 100 }} key={index}>
+            <ScrollView style={{ marginBottom: 50 }} key={index}>
               <View style={styles.centered}>
                 <Image style={styles.logo} source={character.avatar} />
                 <Text style={styles.name}>{character.name}</Text>
