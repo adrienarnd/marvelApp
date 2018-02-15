@@ -13,6 +13,11 @@ import { Images } from '../Themes'
 import data from '../../characters'
 
 class CharacterDetailsScreen extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {}
+  }
+
   renderPagination = (index, total, context) => {
     return (
       <View style={styles.paginationStyle}>
